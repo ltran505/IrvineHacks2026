@@ -1,1 +1,37 @@
+.risk-box {
+  margin-top: 10px;
+}
 
+.risk-card {
+  padding: 10px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.risk-low {
+  background: #66cc66;
+}
+
+.risk-elevated {
+  background: #ffcc00;
+  color: black;
+}
+
+.risk-danger {
+  background: #ff4d4d;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

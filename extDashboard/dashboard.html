@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>NeuroFlow Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="top-bar">
+        <div class="top-bar-left">
+          <div class="logo">
+            <span class="logo-dot"></span>
+            <span class="app-title">NeuroFlow Dashboard</span>
+          </div>
+        </div>
+        <div class="top-bar-right">
+          <span class="pill pill-live">Live</span>
+          <span class="pill">Today</span>
+        </div>
+      </header>
+
+      <main class="dashboard-sections">
+        <!-- Burnout Level Assessment -->
+        <section class="card card-burnout gradient-bg">
+          <div class="card-header">
+            <h2>Burnout Level Assessment</h2>
+            <span id="burnoutLevelBadge" class="status-pill level-low">Low</span>
+          </div>
+
+          <div class="burnout-main">
+            <div class="burnout-score">
+              <span id="burnoutScore" class="burnout-score-value">0</span>
+              <br><br>
+              <span class="burnout-label">Average Burnout score</span>
+            </div>
+            <div id="burnoutDonut" class="chart-container donut-chart"></div>
+          </div>
+
+          <div class="burnout-footer">
+            <div class="metric">
+              <span class="metric-label">Burnout Level</span>
+              <span id="avgBurnoutLevel" class="metric-value level-low">Low</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Total Sessions</span>
+              <span id="totalSessions" class="metric-value">0</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Latest Activity Breakdown -->
+        <section class="card card-activity">
+          <div class="card-header">
+            <h2>Latest Activity Breakdown</h2>
+          </div>
+          <ul class="activity-list">
+            <li><span>Words per minute</span><span id="typingValue">0.0</span></li>
+            <li><span>Error rate</span><span id="errorValue">0.00</span></li>
+            <li><span>Tab switches/min</span><span id="tabValue">0.00</span></li>
+            <li><span>Mouse jitter/min</span><span id="jitterValue">0.0</span></li>
+            <li><span>Latest Burnout Score</span><span id="latestBurnoutScore">0.0</span></li>
+          </ul>
+        </section>
+
+        <!-- Session History -->
+<section class="card card-history gradient-bg">
+  <div class="card-header">
+    <h2>Session History</h2>
+  </div>
+
+  <div class="history-charts">
+    <div class="history-chart-block">
+      <span class="metric-label">Words per Session</span>
+      <div id="typingHistoryChart" class="chart-container"></div>
+    </div>
+
+    <div class="history-chart-block">
+      <span class="metric-label">Error Rate</span>
+      <div id="errorHistoryChart" class="chart-container"></div>
+    </div>
+
+    <div class="history-chart-block">
+      <span class="metric-label">Tab Switches</span>
+      <div id="tabHistoryChart" class="chart-container"></div>
+    </div>
+
+    <div class="history-chart-block">
+      <span class="metric-label">Mouse Jitter</span>
+      <div id="jitterHistoryChart" class="chart-container"></div>
+    </div>
+  </div>
+
+  <!-- Axis Label -->
+  <div class="axis-labels">
+    <span class="y-label">Average Count per Session</span>
+  </div>
+
+</section>
+
+      </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>
